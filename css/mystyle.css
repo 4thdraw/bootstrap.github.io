@@ -30,6 +30,9 @@ p {
     margin-bottom: 4rem;
 }
 
+
+
+
 @media (min-width: 768px) {
     section {
         padding: 9rem 0;
@@ -79,7 +82,6 @@ p {
     font-weight: 700;
 }
 
-
 /* 네비게이션 a 스타일*/
 #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.95rem;
@@ -95,7 +97,23 @@ p {
 /* 네비게이션의  a태그 + 자바스크립트 연동*/
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #ffc800;
+    color: #1100ff;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #1100ff;
+    width: 0;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active:after,
+#mainNav .navbar-nav .nav-item .nav-link:hover:after {
+
+    width: 100%;
 }
 
 
@@ -563,4 +581,8 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .header.navbar-shrink .logo {
     background-position: -181px -102px;
+}
+
+.background-no {
+    background-image: none !important;
 }
